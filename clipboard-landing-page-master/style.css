@@ -1,0 +1,283 @@
+@font-face{
+    font-family: 'baijamjuree';
+    src: url(font/BaiJamjuree-Light.ttf);
+}
+
+body{
+    margin: 0;
+    font-family: 'baijamjuree';
+    color: hsl(201, 11%, 66%);
+        
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+}
+
+h1, h2, h3{
+    color: hsl(210, 10%, 33%);
+}
+
+a{
+    text-decoration: none;
+    color: hsl(210, 10%, 33%);
+}
+
+header, .section1, .section2, .section3, .section4, .list_of_logo, .feature2{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+header{
+    text-align: center;
+    margin-top: 120px;
+}
+
+.logo{
+    margin-bottom: 50px;
+}
+
+/* ----------- BUTTONS --------- */ 
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+button{
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.btn_cyan{
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 1px 3px hsl(171, 65%, 34%);
+}
+
+.btn_blue{
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 1px 3px hsl(233, 45%, 49%);
+}
+
+/* ---------------------------- */ 
+
+.description{
+    text-align: center;
+}
+
+.description_details{
+    margin-bottom: 50px;
+}
+
+.feature_details{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.feature1 h3, .feature1 p{
+    margin-bottom: 0;
+}
+
+.section1{
+    text-align: center;
+}
+
+.computer img, .screen img{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.computer{
+    margin: 0 5%;
+}
+
+.feature{
+    margin-bottom: 100px;
+}
+
+.list_of_logo div{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --------------- footer --------------- */
+
+footer{
+    background-color: rgb(248, 248, 248);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small_logo img{
+    margin-top: 40px;
+    width: 60px;
+}
+
+.small_logo{
+    margin-bottom: 30px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li{
+    margin-bottom: 20px;
+}
+
+a:hover{
+    color: hsl(171, 66%, 44%);
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 50%;
+}
+
+.social a:hover{
+    color: teal;
+    /* background-image: hsl(171, 66%, 44%); /* changer couleur icones au survole  
+    filter: invert(100%) hue-rotate(50deg); */ 
+}
+
+
+/* ----------- ATTRIBUTION ----------- */
+
+article{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+}
+
+/* ---------- MEDIA QUERIES ---------- */ 
+
+@media (min-width: 375px){
+    main{
+       background-image: url(images/bg-header-desktop.png); 
+       background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 900px){
+    
+    .feature1{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .columns .feature_details{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .columns{
+        padding-top: 70px;
+        width: 350px;
+    }
+
+    .feature_details--down{
+        padding-top: 10px;
+    }
+
+    .description_details p, .introduction p{
+        width: 650px;
+    }
+
+    .introduction, .description_details{
+        display: flex;
+        justify-content: center;
+    }
+
+    .computer{
+        margin-left: -360px;
+        margin-right: 120px; 
+        /* autre solution: transform: translateX(-300px); */ 
+    }
+
+    .list_of_logo{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-evenly;
+        margin-bottom: 100px;
+    }
+    
+    footer{ 
+        display: grid; 
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 30px;
+    }
+
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        padding-right: 15%;
+        padding-top: 30px;
+        grid-auto-flow: column;
+    }
+
+    ul li{
+        text-align: start;
+        display: grid;
+    }
+
+    .buttons{
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 700px;
+    }
+
+    .feature2{
+        margin-right: 15%;
+        margin-left: 15%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+
+    .list_of_logo div{
+        text-align: initial;
+    }
+
+    article{
+        background-color: rgb(248, 248, 248);
+        position: static;
+    }
+
+    .attribution {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    
+}
+
+/* changer couleur au survol des logo sociaux */ 
